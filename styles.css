@@ -1,0 +1,462 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: green;
+    color: white;
+    padding: 10px 20px;
+}
+.profile {
+    display: flex;
+    align-items: center;
+}
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.logout-btn {
+    margin-left: 10px;
+    color: white;
+    background: red;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.product {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    width: 250px;
+    text-align: center;
+    border-radius: 5px;
+}
+.product img {
+    width: 100%;
+    height: 150px;
+}
+.promoted {
+    border: 2px solid gold;
+    background: lightyellow;
+}
+nav {
+    background: #2c3e50;
+    padding: 10px 0;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+nav ul li a:hover {
+    background: #34495e;
+    border-radius: 5px;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.category {
+    padding: 10px;
+    background: #f4a261;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    margin: 10px;
+}
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Heading */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #28a745;
+}
+
+/* Input Fields */
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Focus Effect */
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    border-color: #28a745;
+    box-shadow: 0px 0px 5px rgba(40, 167, 69, 0.5);
+    outline: none;
+}
+
+/* File Input */
+.form-container input[type="file"] {
+    border: none;
+    background: #fff;
+}
+
+/* Submit Button */
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background: #28a745;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-container button:hover {
+    background: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .form-container {
+        width: 90%;
+    }
+}
+
+.profile-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.profile-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.profile-form input[type="file"] {
+    border: none;
+}
+
+.profile-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-form button:hover {
+    background: #218838;
+}
+
+/* Profile Image Preview */
+.profile-image-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.profile-image-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #00c853, #b2ff59);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* OTP Container */
+.otp-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 360px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Error Message */
+.error-message {
+    color: #d32f2f;
+    background: #ffebee;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input Field */
+form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+form input:focus {
+    border: 2px solid #00c853;
+    outline: none;
+}
+
+/* Button */
+form button {
+    width: 100%;
+    padding: 12px;
+    background: #00c853;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+/* Button Hover Effect */
+form button:hover {
+    background: #009624;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .otp-container {
+        width: 90%;
+    }
+}
+
+
+        /* Service Cards */
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .card-body {
+            padding: 15px;
+            text-align: center;
+            background: #f8f9fa;
+        }
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .card-text {
+            font-size: 14px;
+            color: #555;
+        }
+   
+nav {
+    background: #2c3e50;
+    padding: 10px 0;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+nav ul li a:hover {
+    background: #34495e;
+    border-radius: 5px;
+}
+.banner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.promo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.promo-slider {
+    display: flex;
+    width: max-content;
+    animation: slideBanner 12s infinite linear;
+}
+
+.promo-item {
+    width: 300px; /* Adjust width as needed */
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.promo-item:hover {
+    transform: scale(1.05);
+}
+
+.promo-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.promo-details {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.promo-contact {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Auto-slide animation */
+@keyframes slideBanner {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
